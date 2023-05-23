@@ -1,0 +1,89 @@
+base_model : 
+ gcn
+base_optim:
+ adam
+n_layers:
+ 2
+ood_model:
+ identity
+activation :
+ relu
+n_hidden:
+ 64
+dropout:
+ 0.7
+
+n_hidden_per_head:
+ 8
+
+attn_heads:
+ 8
+ 
+attn_dropout:
+ 0.3
+ 
+dataset: "Cora" 
+
+inductive: False
+
+disjunkt: False
+
+temporal: False
+
+unseen_classes: []
+
+adj_potenz: null
+
+tau: 1
+
+threshold: 0.1
+
+model_loss_weight: 10
+
+optimizer: "adam"
+
+lr: 0.01
+
+#0.0005
+weight_decay: 0 
+
+num_repeats: 5
+
+n_epochs: 200
+
+device:
+- 3
+
+return_attention_weights: False
+
+score_aggregation: "max"
+
+score_normalize: False
+
+node_aggregation: False
+
+neigh_influence: 0.2
+
+temperature: 1
+
+odin_eps: 0.08
+
+odin_perturbation: [True, False]
+
+t_start: 0
+
+threshold_method: "pure"
+
+eval_mult_thresholds: False
+
+validate: False
+
+eval_on_known: False
+
+ood_weight: True
+
+sampler: null
+
+n_sampler_batch_size: 32
+
+custom_split: null

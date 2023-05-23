@@ -1,0 +1,78 @@
+base_model : 
+ - gcn
+ 
+base_optim:
+ - adam
+ 
+ood_model:
+- odin
+ 
+n_layers:
+ - 2
+
+n_hidden:
+ - 128
+
+dropout:
+ - 0.9
+
+dataset: 
+ - "Cora"
+ 
+unseen_classes:
+# add median min max
+- [0]
+- [1]
+- [2]
+- [3]
+- [4]
+- [5]
+- [6]
+
+
+inductive: 
+- True
+
+temporal: 
+- False
+
+
+t_start: 
+- 2005
+
+device:
+- [0]
+
+adj_potenz:
+- 2
+
+lr:
+- 0.0001
+
+
+tau:
+- 1
+
+model_loss_weight:
+- 1
+
+num_repeats: 
+- 2
+
+validate:
+- False
+
+n_epochs:
+- 200
+
+threshold:
+- 0.05
+
+threshold_method:
+- "pure"
+
+odin_eps:
+- 0.01
+
+temperature:
+- 1000
